@@ -1,7 +1,5 @@
 <div class="home-wrapper">
   <div>
-    <h1 x-large>Hearthstone Card</h1>
-  
     <div class="row">
       <div class="col-lg-3 col-md-4 col-sm-8 col-xs-10 center-aligned home-body">
         <form (ngSubmit)="submitState(searchString)" autocomplete="off">
@@ -11,11 +9,10 @@
               class="form-control text-center"
               [value]="searchString"
               (input)="searchString = $event.target.value"
+              (keyup.enter)="submitState(searchString)"
               placeholder="Search By Name"
               autofocus>
           </div>
-    
-          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
     </div>

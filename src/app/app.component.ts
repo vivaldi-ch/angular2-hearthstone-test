@@ -19,12 +19,12 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
-    <h2>{{name}}</h2>
-
-    <div>
-      <a class="logo-wrapper" [href]="url">
-        <i class="fa fa-twitter fa-5x"></i>
-      </a>
+    <div class="row">
+      <div class="col-md-5 col-sm-7 col-xs-11 center-aligned">
+        <a [href]="url">
+          <img [src]="logo" width="100%">
+        </a>
+      </div>
     </div>
 
     <main>
@@ -34,7 +34,8 @@ import { AppState } from './app.service';
 })
 export class AppComponent implements OnInit {
   public name = 'Angular 2 Test App';
-  public url = 'https://twitter.com/?lang=en';
+  public url = 'http://us.battle.net/hearthstone/en/';
+  public logo = 'assets/img/HearthstoneLogo.png';
 
   constructor(
     public appState: AppState

@@ -1,16 +1,19 @@
 html, body{
+  @include clearfix;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  margin: 0 auto;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fffcf1+0,fff3cb+47,ffe9a1+100 */
+  background: #fffcf1; /* Old browsers */
+  background: -moz-linear-gradient(left,  #fffcf1 0%, #fff3cb 47%, #ffe9a1 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #fffcf1 0%,#fff3cb 47%,#ffe9a1 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #fffcf1 0%,#fff3cb 47%,#ffe9a1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffcf1', endColorstr='#ffe9a1',GradientType=1 ); /* IE6-9 */
 }
 
-a.active {
-  background-color: gray;
-}
-
-a.logo-wrapper .fa-twitter {
-	color: #0084b4;
+a.center-aligned > a > img {
+	margin-top: 5%;
 }
 
 .center-aligned {
