@@ -25,9 +25,12 @@ import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
+import { HomeResultComponent } from './home/result/home-result.component';
 import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
+
+import { HomeService } from './home/home.service';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -53,6 +56,7 @@ type StoreType = {
     AppComponent,
     AboutComponent,
     HomeComponent,
+    HomeResultComponent,
     NoContentComponent,
     XLargeDirective
   ],
@@ -64,7 +68,8 @@ type StoreType = {
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    HomeService
   ]
 })
 export class AppModule {

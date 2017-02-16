@@ -1,8 +1,8 @@
 html, body{
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0 auto;
   text-align: center;
+  margin: 0 auto;
 }
 
 a.active {
@@ -11,4 +11,22 @@ a.active {
 
 a.logo-wrapper .fa-twitter {
 	color: #0084b4;
+}
+
+.center-aligned {
+  float: none;
+  margin: 0 auto;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
 }

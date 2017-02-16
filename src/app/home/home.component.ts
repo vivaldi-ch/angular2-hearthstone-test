@@ -4,8 +4,11 @@ import {
 } from '@angular/core';
 
 import { AppState } from '../app.service';
+import { HomeService } from './home.service';
+import { HomeResultComponent } from './result/home-result.component';
 import { Title } from './title';
 import { XLargeDirective } from './x-large';
+import { Card } from '../object/card';
 
 @Component({
   // The selector is what angular internally uses
@@ -23,12 +26,20 @@ import { XLargeDirective } from './x-large';
 })
 export class HomeComponent implements OnInit {
   // Set our default values
-  public localState = { value: '' };
+  public errorMessage: string;
+  public searchString = '';
+  public cardLists: Card[];
+
   // TypeScript public modifiers
   constructor(
     public appState: AppState,
-    public title: Title
+    public title: Title,
+    private homeService: HomeService
   ) {}
+
+  public trackByCard(index: number, card: any) {
+    return card.cardId;
+  }
 
   public ngOnInit() {
     console.log('hello `Home` component');
@@ -36,8 +47,9 @@ export class HomeComponent implements OnInit {
   }
 
   public submitState(value: string) {
-    console.log('submitState', value);
-    this.appState.set('value', value);
-    this.localState.value = '';
+    this.homeService.searchCard(value)
+                    .then(
+                      (cards) => this.cardLists = cards,
+                      (error) => this.errorMessage = <any> error);
   }
 }

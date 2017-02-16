@@ -1,0 +1,12 @@
+<ng-container *ngIf="isCardFound()">
+  <div *ngFor="let card of cardLists; let i = index; 
+        trackBy: trackByCard"
+       class="col-md-4 col-sm-6 col-xs-12 center-block col-centered">
+    <img [src]="card.img">
+    <br>
+  </div>
+</ng-container>
+<ng-container *ngIf="!isCardFound()">
+  <br>
+  <h4>{{notFoundMessage}}</h4>
+</ng-container>
