@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Card } from '../../object/card';
+import { ImageLoader } from '../shared/components/loading-image.component';
 
 @Component({
   selector: 'card-result',
   // Our list of styles in our component. We may add more to compose many styles together
-  styleUrls: [ '../home.component.css' ],
+  styleUrls: [ '../home.component.css', './home-result.component.css' ],
   // Every Angular template is first compiled by the browser before Angular runs it's compiler
   templateUrl: './home-result.component.html'
 })

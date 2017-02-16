@@ -2,7 +2,7 @@
   <div *ngFor="let card of cardLists; let i = index; 
         trackBy: trackByCard"
        class="col-md-4 col-sm-6 col-xs-12 center-block col-centered">
-    <img [src]="card.img">
+    <image-loader [src]="card.img"></image-loader>
     <br>
   </div>
 </ng-container>

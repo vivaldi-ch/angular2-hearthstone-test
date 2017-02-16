@@ -29,8 +29,10 @@ import { HomeResultComponent } from './home/result/home-result.component';
 import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
-
 import { HomeService } from './home/home.service';
+
+// Shared
+import { ImageLoader } from './shared/components/loading-image.component';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -58,7 +60,8 @@ type StoreType = {
     HomeComponent,
     HomeResultComponent,
     NoContentComponent,
-    XLargeDirective
+    XLargeDirective,
+    ImageLoader
   ],
   imports: [ // import Angular's modules
     BrowserModule,
