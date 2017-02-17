@@ -53,12 +53,16 @@ describe(`Home`, () => {
     fixture.detectChanges(); // trigger initial data binding
   });
 
-  it('should have default data', () => {
-    expect(comp.localState).toEqual({ value: '' });
+  it('should have errorMessage variable', () => {
+    expect(comp.errorMessage).toBeUndefined();
   });
 
-  it('should have a title', () => {
-    expect(!!comp.title).toEqual(true);
+  it('should have searchString variable', () => {
+     expect(comp.searchString).toBe('');
+  });
+
+  it('shoudl have cardLists variable', () => {
+    expect(comp.cardLists).toBeUndefined();
   });
 
   it('should log ngOnInit', () => {
